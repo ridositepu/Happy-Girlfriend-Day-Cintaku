@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Happy Girlfriend Day 💗</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(135deg,#fff0f6,#ffe4ef,#fff8fb);color:#5b2940;overflow-x:hidden}
+section{min-height:100vh;padding:70px 20px;display:flex;align-items:center;justify-content:center;position:relative}
+.card{max-width:850px;width:100%;background:rgba(255,255,255,.72);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8);border-radius:30px;padding:35px;box-shadow:0 20px 60px rgba(184,73,117,.15);text-align:center}
+h1{font-size:clamp(42px,9vw,78px);margin:10px 0;color:#c52f68;line-height:1.05}
+h2{font-size:34px;margin:10px 0 18px}.lead{font-size:19px;line-height:1.8}
+.btn{border:0;border-radius:999px;padding:15px 25px;background:#d83d76;color:white;font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 10px 25px rgba(216,61,118,.25);transition:.25s}
+.btn:hover{transform:translateY(-3px) scale(1.03)}.btn.secondary{background:white;color:#c52f68;border:1px solid #f2b8cc}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:25px 0}
+.photo{height:260px;border-radius:22px;object-fit:cover;width:100%;background:#ffd7e5;border:4px solid white;box-shadow:0 8px 25px rgba(120,40,70,.12)}
+.note{font-size:18px;line-height:1.9;text-align:left;background:#fff7fa;border-radius:20px;padding:25px;margin-top:20px}
+footer{padding:30px;text-align:center}.heart{position:fixed;bottom:-40px;animation:float 6s linear forwards;pointer-events:none;z-index:20;font-size:24px}
+@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:1}100%{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.pop{animation:pop .7s ease both}@keyframes pop{from{opacity:0;transform:translateY(25px) scale(.96)}to{opacity:1;transform:none}}
+.pulse{animation:pulse 1.5s infinite}@keyframes pulse{50%{transform:scale(1.07)}}
+@media(max-width:650px){.photo-grid{grid-template-columns:1fr 1fr}.photo{height:190px}.card{padding:24px 17px}}
+@media(max-width:430px){.photo-grid{grid-template-columns:1fr}.photo{height:300px}}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+
+<section>
+  <div class="card pop">
+    <div style="font-size:60px" class="pulse">💗</div>
+    <h1>Happy Girlfriend Day</h1>
+    <p class="lead">Untuk Angeli Shaila Devi — Shai, seseorang yang selalu punya tempat spesial di hati aku.</p>
+    <button class="btn" onclick="document.getElementById('message').scrollIntoView()">Buka pesanku 💌</button>
+  </div>
+</section>
+
+<section id="message">
+  <div class="card pop">
+    <h2>Untuk Shai 🤍</h2>
+    <p class="lead">Terima kasih sudah hadir, menemani hari-hariku, dan membuat banyak hal sederhana terasa lebih berarti.</p>
+    <div class="note">
+      <b>Pesan kecil dari aku:</b><br><br>
+      Shai, kamu nggak harus selalu sempurna untuk menjadi seseorang yang berarti.
+      Aku bersyukur bisa mengenal kamu, tertawa bareng kamu, dan punya banyak cerita yang bisa kita ingat bersama.
+      Semoga kita selalu bisa saling memahami, saling menjaga, dan terus membuat kenangan indah. 💗
+    </div>
+    <br>
+    <button class="btn secondary" onclick="moreLove()">Klik kalau kamu mau lihat kejutan ✨</button>
+  </div>
+</section>
+
+<section>
+  <div class="card pop">
+    <h2>Our Little Memories 📸</h2>
+    <p>Enam potret Shai yang ingin selalu aku simpan sebagai kenangan. 📸</p>
+    <div class="photo-grid">
+      <img class="photo" src="foto1.jpeg" alt="Shai — kenangan 1" loading="lazy">
+      <img class="photo" src="foto2.jpeg" alt="Shai — kenangan 2" loading="lazy">
+      <img class="photo" src="foto3.jpeg" alt="Shai — kenangan 3" loading="lazy">
+      <img class="photo" src="foto4.jpeg" alt="Shai — kenangan 4" loading="lazy">
+      <img class="photo" src="foto5.jpeg" alt="Shai — kenangan 5" loading="lazy">
+      <img class="photo" src="foto6.jpeg" alt="Shai — kenangan 6" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card pop">
+    <div style="font-size:55px">🌷💗✨</div>
+    <h2>One More Thing...</h2>
+    <p class="lead">Dari sekian banyak hal yang terjadi, aku tetap bersyukur salah satunya adalah bisa bertemu kamu.</p>
+    <button class="btn pulse" onclick="moreLove()">I Love You 💗</button>
+    <p id="surprise" class="lead" style="display:none;margin-top:25px;font-weight:700;color:#c52f68">
+      Kamu adalah salah satu bagian paling manis dari cerita yang sedang aku jalani. 💞
+    </p>
+  </div>
+</section>
+
+<footer>Made with 💗 for someone special</footer>
+
+<script>
+function heart(){
+  const h=document.createElement('div');h.className='heart';
+  h.textContent=['💗','💖','💕','💘','🌸'][Math.floor(Math.random()*5)];
+  h.style.left=Math.random()*100+'vw';
+  h.style.animationDuration=(4+Math.random()*4)+'s';
+  h.style.fontSize=(18+Math.random()*22)+'px';
+  document.body.appendChild(h); setTimeout(()=>h.remove(),8000);
+}
+setInterval(heart,500);
+function moreLove(){
+  document.getElementById('surprise').style.display='block';
+  for(let i=0;i<25;i++) setTimeout(heart,i*70);
+}
+</script>
+</body>
+</html>
